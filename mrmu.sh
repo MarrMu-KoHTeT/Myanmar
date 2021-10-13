@@ -28,7 +28,7 @@ figlet We Love | lolcat
 figlet -f big MYANMAR | lolcat
 
 echo -e ""
-echo -e $GR " Enter Your Name : "
+echo -e $LBL " Enter Your Name : "
 read name
 
 echo -e "clear" >clear.txt
@@ -38,13 +38,14 @@ echo
 PS1='\[\033[01;32m\]┌─\[\033[01;36m\]《\[\033[01;75m\]MarMu\[\033[01;31m\] @ \[\033[01;33m\]${PWD/*\//}\[\033[01;36m\]》\[\033[01;32m\]☆\[\033[01;36m\]《\[\033[01;32m\]I.♡.U\[\033[01;31m\] @ \[\033[01;32m\]\T\[\033[01;36m\]》\[\033[01;32m\]☆ \[\033[01;36m\]{\[\033[01;31m\]2018\033[01;36m\]}\[\033[01;32m\]*\[\033[01;36m\]\[\033[01;32m\]\[\033[01;35m\]
 \[\033[01;32m\]|
 \[\033[01;32m\]└─>M\[\033[01;32m\]»»\[\033[01;33m\] '
-
+echo "PS1" >mark.txt
 rm -rf /data/data/com.termux/files/usr/etc/bash.bashrc
 rm -rf /data/data/com.termux/files/usr/etc/zshrc
 
 touch bash.bashrc
 
 cp bash.bashrc /data/data/com.termux/files/usr/etc/
+
 echo -e $RD"Enter Tool Password"
 read pass
 if [ $pass -eq 1234 ]
